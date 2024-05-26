@@ -42,12 +42,12 @@
 // Якщо так, вивести в консоль "Число потрапляє в діапазон".
 // Якщо ні, вивести в консоль "Число не потрапляє в діапазон".
 // function checkNumber() {
-//     const number = prompt('введіть число') 
+//     const number = prompt('введіть число')
 //    return number >= 55 && number <= 99 ? "Число потрапляє в діапазон" : "Число не потрапляє в діапазон" ;
         
 // }
 
-// console.log(checkNumber()); 
+// console.log(checkNumber());
 
 
 
@@ -56,14 +56,67 @@
 // Є 3 вікові групи : діти (0-16), дорослі(17-60), пенсіонери (61-100).
 // До якої групи відноситься Максим, якщо йому 55 років.Назву групи вивести на екран.
 
-const ageMaxsim = 10 ;
-if (ageMaxsim >= 0 &&  ageMaxsim <= 16) {
-    console.log("child");
-} else if (ageMaxsim >= 17 && ageMaxsim <= 60) {
-    console.log("adault");
-} else if (ageMaxsim >= 61 && ageMaxsim <= 100) { 
-console.log("old peopel") 
+// const ageMaxsim = 10 ;
+// if (ageMaxsim >= 0 &&  ageMaxsim <= 16) {
+//     console.log("child");
+// } else if (ageMaxsim >= 17 && ageMaxsim <= 60) {
+//     console.log("adault");
+// } else if (ageMaxsim >= 61 && ageMaxsim <= 100) {
+// console.log("old peopel")
     
-} else {
-    console.log("erro");
-}
+// } else {
+//     console.log("erro");
+// }
+
+//TODO:============task-5=========================
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+// const drink = prompt("Який напій бажаєте?").toLocaleLowerCase()
+
+// function orderDrink(drink) {
+//     switch (drink) {
+//       case "кава":
+//         return "сумма до сплати 50 грн";
+
+//       case "чай":
+//         return "сумма до сплати 30 грн";
+
+//       case "сік":
+//             return "сумма до сплати 40 грн";
+        
+//         default:
+//             return "Помилка";
+//     }
+    
+// }
+
+//  console.log(orderDrink(drink));
+
+
+//* Цикл while and do while
+// TODO: 6 ===================================
+// Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо відвідувач ввів інше число - попросити
+// ввести ще раз і так далі.
+// Цикл має питати число, поки відвідувач не
+// введе число більше 100, або натисне кнопку
+// скасування в prompt
+
+// let index = 0;
+
+// while (index <= 100) {
+//     console.log(index);
+//     index += 1;
+// }
+
+// for (let i = 0; i <= 100; i += 1) {
+//     console.log(i);
+// }
+
+
+// let number = prompt("Введіть число бульше 100");
+
+// while (number < 100) {
+//     number = prompt("Введіть число бульше 100");
+// }
