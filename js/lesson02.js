@@ -123,3 +123,50 @@ function findMaxNumber(array) {
 // return false;
 //   }
 //   console.log(getBool(obj, "model"));
+
+//TODO:============task-3======================================================
+// У нас є об'єкт, у якому зберігатимуться зарплати
+// нашої команди
+// Напишіть код для сумування всіх зарплат і
+// збережіть його результат у змінній sum.
+// Якщо об'єкт salaries порожній, то результат має бути 0
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+
+// let sum = 0
+
+// const valuesArray = Object.values(salaries)
+
+// for (const value of valuesArray) {
+//   sum += value
+// }
+
+// console.log(sum);
+
+// console.log(Object.entries(salaries))
+
+//TODO:============task-4======================================================
+// Створіть функцію multiplyNumeric(obj),
+// яка множить всі числові властивості об'єкта obj на 2.
+
+// до виклику функції
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu',
+// };
+
+// function multiplyNumeric(obj) {
+//   for (const key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2
+//     }
+//   }
+//   return obj
+// }
+
+// console.log(multiplyNumeric(menu))
