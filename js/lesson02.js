@@ -70,3 +70,56 @@ function findMaxNumber(array) {
 }
 
 // console.log(findMaxNumber(numbersArray));
+
+
+
+
+// * Літерал об'єкта
+//TODO:============task-1=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+
+// const human = {
+//     userName: "Mango" ,
+//     hobby: "footboll",
+//     age: 34,
+//     greet() {
+//         console.log(`Hallo ${this.userName}`);
+//     }
+// }
+
+// console.log(human.age);
+// human.greet()
+// human.mood = "happy"
+// console.log(human);
+// human.hobby = "skydiving"
+// console.log(human);
+
+
+
+
+//TODO:============task-2======================================================
+// Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true
+// Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
+
+// const obj = {
+//     name: 'Igor',
+//     car: 'Mercedes',
+//     carColor: 'black',
+//   };
+//   function getBool(object, key) {
+// //     const keys = Object.keys(object) ;
+// //    return keys.includes(key)
+// for(const value in object) {
+//     if(value === key) {
+//         return true;
+//     }
+    
+// }
+// return false;
+//   }
+//   console.log(getBool(obj, "model"));
