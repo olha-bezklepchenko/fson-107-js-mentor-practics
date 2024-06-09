@@ -170,3 +170,26 @@ function findMaxNumber(array) {
 // }
 
 // console.log(multiplyNumeric(menu))
+
+//TODO:============task-5==============================================
+// Створіть об'єкт "магазин" зі списком товарів. Напишіть метод "hasProduct", який буде перевіряти, чи є певний товар в наявності на складі магазину.
+
+const store = {
+  products: [],
+  
+  hasProduct(productName) {
+
+    return this.products.includes(productName);
+
+  },
+
+  addProducts(arrayProduct) {
+    
+    this.products.push(...arrayProduct);
+
+    console.log(this.products)
+
+  }
+}
+
+store.addProducts(["tomato", "orange", "kivi"])
