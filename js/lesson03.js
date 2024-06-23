@@ -290,10 +290,27 @@ const callback = (number) =>
   | ##### Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
   |============================
 */
+class Person {
+  
 
-// const person = new Person('John', 30, 'male', 'john@hmail.com');
+  constructor(name, age, gender, email) {
+    this.name = name
+     this.age = age
+     this.gender = gender
+     this.email = email
+}
+getDetails() {
+  return {
+    name: this.name,
+    age: this.age,
+    gender: this.gender,
+    email: this.email
+}
+  }
+  }
+const person = new Person('John', 30, 'male', 'john@hmail.com');
 
-// console.log(person.getDetails());
+console.log(person.getDetails());
 
 /**
   |=============Employee===============
@@ -303,7 +320,20 @@ const callback = (number) =>
   |  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
   |============================
 */
-
+// class Employee extends Person {
+//   constructor(salary, department, name, age, gender, email) {
+//     super(name, age, gender, email)
+//     this.salary = salary;
+//     this.department = department;
+//   }
+//   getEmployeeDetails() {
+//     return {
+//       ...this.getDetails(),
+//       salary: this.salary,
+//      department: this.department
+//     }
+//   }
+// }
 // const employee = new Employee(
 //   5000,
 //   'developer',
@@ -312,4 +342,5 @@ const callback = (number) =>
 //   'male',
 //   'bob@hmail.com'
 // );
+
 // console.log(employee.getEmployeeDetails());
