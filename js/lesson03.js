@@ -5,7 +5,7 @@
 const performOperation = (a, b, callback) => callback(a * b);
 
 const callback = (number) =>
-  number % 2 === 0 ? Math.pow(number, 2) : Math.sqrt(number);
+    number % 2 === 0 ? Math.pow(number, 2) : Math.sqrt(number);
 
 // const callback = number => {
 //   if (number % 2 === 0) {
@@ -57,7 +57,6 @@ const callback = (number) =>
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
 
-
 // const getNewArray = (array) => array.map(num => num * num);
 
 // const res = getNewArray([1, 2, 3, 4, 5]);
@@ -66,14 +65,12 @@ const callback = (number) =>
 //TODO:=========task-02=================
 // Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-
 // const data = [
 //   { id: 1, values: [1, 2, 3] },
 //   { id: 2, values: [4, 5, 6] },
 //   { id: 3, values: [7, 8, 9] },
 // ];
 // const flatArray = (array) => array.flatMap(element => element.values);
-
 
 // const res = flatArray(data);
 // console.log(res);
@@ -107,7 +104,7 @@ const callback = (number) =>
 
 // const numbers = [1, 2, 3, 4, 5];
 
-// const getNumber = (array, value) => array.find(element => element > value); 
+// const getNumber = (array, value) => array.find(element => element > value);
 // const res = getNumber(numbers, 3);
 // console.log(res);
 
@@ -118,7 +115,6 @@ const callback = (number) =>
 // // const sortedArray = array => array.toSorted((a, b) => b - a);
 
 // const sortedArray = array => [...array].sort((a, b) => b - a);
-
 
 // const res = sortedArray(numbersArray);
 // console.log(res);
@@ -179,26 +175,61 @@ const callback = (number) =>
  * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
  */
 
+// class Calculator {
+//     constructor() {
+//         this.result = 0;
+//     }
+
+//     number(num) {
+//         this.result = num;
+//         return this;
+//     }
+
+//     getResult() {
+//         return this.result
+//     }
+
+//     add(num) {
+//         this.result += num;
+//         return this;
+//     }
+
+//     substruct(num) {
+//         this.result -= num;
+//         return this;
+//     }
+
+//     divide(num) {
+//         this.result /= num;
+//         return this;
+//     }
+
+//     multiply(num) {
+//         this.result *= num;
+//         return this;
+//     }
+// }
+
 // const calculator = new Calculator();
 // console.log(calculator);
 
 // const res = calculator
-//   .number(10)
-//   .add(10)
-//   .divide(2)
-//   .multiply(4)
-//   .substruct(5)
-//   .getResult();
+//     .number(10)
+//     .add(10)
+//     .divide(2)
+//     .multiply(4)
+//     .substruct(5)
+//     .getResult();
 
 // console.log(res);
 
 // const res2 = calculator
-//   .number(20)
-//   .substruct(40)
-//   .multiply(-8)
-//   .divide(160)
-//   .add(20)
-//   .getResult();
+//     .number(20)
+//     .substruct(40)
+//     .multiply(-8)
+//     .divide(160)
+//     .add(20)
+//     .getResult();
 
 // console.log(res2);
 
@@ -210,16 +241,42 @@ const callback = (number) =>
  * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
  */
 
-// const client = new Client('Mango', 'mango@gmail.com');
+// class Client {
+//     #login;
+//     #email;
+
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+
+//     get login() {
+//         return this.#login;
+//     }
+
+//     set login(newLogin) {
+//         this.#login = newLogin;
+//     }
+
+//     get email() {
+//         return this.#email;
+//     }
+
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
+
+// const client = new Client("Mango", "mango@gmail.com");
 
 // client.login = 12343;
+
+// client.email = "mango555@gmail.com";
+// console.log(client.email);
+// client.login = "12345";
+// console.log(client.login);
+
 // console.log(client);
-
-// client.changeEmail = 'mango555@gmail.com';
-// console.log(client.getEmail);
-// client.changeLogin = '12345';
-// console.log(client.getLogin);
-
 //! Практика наслідування у класах.
 //TODO:=========task-04=================
 /**
