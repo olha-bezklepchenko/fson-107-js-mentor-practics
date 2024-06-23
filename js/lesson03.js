@@ -115,6 +115,10 @@ const callback = (number) =>
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
 // const numbersArray = [4, 2, 5, 1, 3];
+// // const sortedArray = array => array.toSorted((a, b) => b - a);
+
+// const sortedArray = array => [...array].sort((a, b) => b - a);
+
 
 // const res = sortedArray(numbersArray);
 // console.log(res);
@@ -124,6 +128,7 @@ const callback = (number) =>
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
+// const sortedArray = array => array.toSorted((a, b) => a.localeCompare(b));
 // const res = sortedArray(stringArray);
 // console.log(res);
 
@@ -135,11 +140,22 @@ const callback = (number) =>
 //   { name: 'Jane', age: 31 },
 //   { name: 'Bob', age: 19 },
 // ];
+// // const checkArray = users => users.filter(element => element.age > 20);
+
+// const checkArray = users => users
+//   .filter(element => element.age > 20)
+//   .map(element => element.name)
+//   .toSorted((a, b) => a.localeCompare(b));
+
+// const result = checkArray(user);
+// console.log(result);
 
 //TODO:=========task-09=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
 // const numbers = [1, 2, 3, 4, 5];
+
+// const sum = array => array.reduce((acc, element) => (acc += element), 0);
 
 // const res = sum(numbers);
 // console.log(res);
@@ -149,6 +165,7 @@ const callback = (number) =>
 
 // const arr = [1, 2, 3, 4, 5];
 
+// const averageValue = array => array.reduce((acc, element) => acc += element / array.length, 0);
 // const res = averageValue(arr);
 // console.log(res);
 
