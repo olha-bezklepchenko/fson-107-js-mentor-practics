@@ -2,9 +2,23 @@
 //TODO:============task-01=========================
 // Напишіть функцію, яка приймає два числа і колбек-функцію. Функція повинна помножити числа між собою та передати результат дії до колбек-функції. Колбек-функція повинна, у разі, якщо, це число є парним - помножити це число на себе, якщо ні - взяти квадратний корінь з цього числа, та вивести результат у консоль лог.
 
-// const result = performOperation(31, 41, callbackFunction);
+const performOperation = (a, b, callback) => callback(a * b);
 
+const callback = (number) =>
+  number % 2 === 0 ? Math.pow(number, 2) : Math.sqrt(number);
+
+// const callback = number => {
+//   if (number % 2 === 0) {
+//     return Math.pow(number, 2);
+//   } else {
+//     return Math.sqrt(number);
+//   }
+// };
+
+// const result = performOperation(31, 41, callback);
+// const result1 = performOperation(30, 40, callback);
 // console.log(result);
+// console.log(result1);
 
 //TODO:============task-02=========================
 // Напишіть функцію, яка приймає масив і колбек-функцію. Функція повинна повернути перший елемент масиву,
@@ -15,6 +29,24 @@
 
 // const numbers = [1, 2, 5, 7, 9, 20];
 // const words = ["apple", "banana", "orange", "pear"];
+
+// const findElement = (array, callback) => {
+//   let result = null;
+//   array.forEach((element) => {
+//     if (callback(element) && result === null) {
+//       result = element;
+//     }
+//   });
+//   return result;
+// };
+
+// const isEven = (number) => {
+//   return number % 2 === 0;
+// };
+
+// const startWithO = (words) => {
+//   return words.toLowerCase().startsWith("o");
+// };
 
 // const res = findElement(numbers, isEven);
 // const res2 = findElement(words, startWithO);
