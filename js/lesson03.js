@@ -57,17 +57,23 @@ const callback = (number) =>
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
 
+
+// const getNewArray = (array) => array.map(num => num * num);
+
 // const res = getNewArray([1, 2, 3, 4, 5]);
 // console.log(res);
 
 //TODO:=========task-02=================
 // Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
+
 // const data = [
 //   { id: 1, values: [1, 2, 3] },
 //   { id: 2, values: [4, 5, 6] },
 //   { id: 3, values: [7, 8, 9] },
 // ];
+// const flatArray = (array) => array.flatMap(element => element.values);
+
 
 // const res = flatArray(data);
 // console.log(res);
@@ -81,6 +87,8 @@ const callback = (number) =>
 //   { name: 'Bob', age: 19 },
 // ];
 
+// const checkAge = (array) => array.some(element => element.age > 20);
+
 // const res = checkAge(people);
 // console.log(res);
 
@@ -88,6 +96,8 @@ const callback = (number) =>
 //  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
 
 // const numbers = [2, 4, 6, 8, 10];
+
+// const checkEvenArray = (array) => array.every(element => element % 2 === 0);
 
 // const res = checkEvenArray(numbers);
 // console.log(res);
@@ -97,6 +107,7 @@ const callback = (number) =>
 
 // const numbers = [1, 2, 3, 4, 5];
 
+// const getNumber = (array, value) => array.find(element => element > value); 
 // const res = getNumber(numbers, 3);
 // console.log(res);
 
