@@ -79,3 +79,30 @@ filmList.innerHTML = createMarkup(films)
      <p>${title}</p>
 </li> */
 }
+
+
+//TODO:=========task-03=================
+/**
+ *!  Form Events, Input, Focus, Blur and Submit.
+
+*? Викоритовуй шаблон форми з файлу html.
+
+** 1 - При події `input`, якщо користувач ввів в поле більше 6 символів то додати клас `success`. Якщо ж символів менше аніж 6, то клас `error`*/
+
+const formElement = document.querySelector(".js-contact-form");
+
+const onInput = (event) => {
+  const input = event.target;
+
+  if( input.value.trim().length > 6)  {
+    input.classList.add("success") 
+    input.classList.remove("error")
+  } else {
+    input.classList.add("error")
+    input.classList.remove("success")
+  }
+}
+
+
+formElement.addEventListener("input", onInput) 
+
