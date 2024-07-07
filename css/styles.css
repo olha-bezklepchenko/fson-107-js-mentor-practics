@@ -1,0 +1,23 @@
+.number-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.number {
+  display: flex;
+  flex-basis: calc((100% - 190px) / 20);
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.even {
+  background-color: orange;
+}
+
+.odd {
+  background-color: lime;
+}
