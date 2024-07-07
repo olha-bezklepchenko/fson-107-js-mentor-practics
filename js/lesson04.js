@@ -10,14 +10,14 @@ const divContainer = document.createElement("div");
 divContainer.classList.add("number-container");
 
 for (let i = 0; i < boxes; i++) {
-  const box = document.createElement("div");
-  box.classList.add("number");
-  box.textContent = randomNumber();
-  box.textContent % 2 === 0
-    ? box.classList.add("even")
-    : box.classList.add("odd");
+	const box = document.createElement("div");
+	box.classList.add("number");
+	box.textContent = randomNumber();
+	box.textContent % 2 === 0
+		? box.classList.add("even")
+		: box.classList.add("odd");
 
-  divContainer.appendChild(box);
+	divContainer.appendChild(box);
 }
 
 // console.log(divContainer);
@@ -33,49 +33,49 @@ bodyEl.prepend(divContainer);
 // Створи HTML список фільмів на основі масиву під назвою films. Користувач обожнює дивитися кіно, дивиться його часто, тому при вході на сторінку він хоче бачити, які фільми вже були переглянуті, а до яких він ще не добрався. Вперу чергу зарендери фільми на сторінку, використовуй допоміжну функцію createMarkup(), яка буде повертати розмітку. Додай розмітку на сторінку задопомогою insertAdjacentHTML() і тільки після цього зроби елементи фільмів (li), які вже були переглянуті напівпрозорими (opacity: 0.5). Для цього використовуй масив унікальних id фільмів, знайди на сторінці елементи у яких id дорівнює тому id фільма, який користувач вже перелянув аби саме їх зробити напівпрозорими.
 
 const films = [
-  {
-    title: "Tetris",
-    imgUrl: "https://static.hdrezka.ac/i/2023/3/20/f509264b419fdmu53x38j.jpg",
-    id: "film_1",
-  },
-  {
-    title: "Avatar: The Way of Water",
-    imgUrl: "https://static.hdrezka.ac/i/2022/12/22/tc5e6b8212683gn66r84s.jpg",
-    id: "film_2",
-  },
-  {
-    title: "Operation Fortune: Ruse de guerre",
-    imgUrl: "https://static.hdrezka.ac/i/2022/2/11/s0d53f6cf0ae0tq29m85l.jpg",
-    id: "film_3",
-  },
-  {
-    title: "Babylon",
-    imgUrl: "https://static.hdrezka.ac/i/2022/12/25/z330b47a82209ww99w55a.jpg",
-    id: "film_4",
-  },
-  {
-    title: "The Whale",
-    imgUrl: "https://static.hdrezka.ac/i/2023/2/24/h23d8c65d734akd89q94c.jpg",
-    id: "film_5",
-  },
+	{
+		title: "Tetris",
+		imgUrl: "https://static.hdrezka.ac/i/2023/3/20/f509264b419fdmu53x38j.jpg",
+		id: "film_1",
+	},
+	{
+		title: "Avatar: The Way of Water",
+		imgUrl: "https://static.hdrezka.ac/i/2022/12/22/tc5e6b8212683gn66r84s.jpg",
+		id: "film_2",
+	},
+	{
+		title: "Operation Fortune: Ruse de guerre",
+		imgUrl: "https://static.hdrezka.ac/i/2022/2/11/s0d53f6cf0ae0tq29m85l.jpg",
+		id: "film_3",
+	},
+	{
+		title: "Babylon",
+		imgUrl: "https://static.hdrezka.ac/i/2022/12/25/z330b47a82209ww99w55a.jpg",
+		id: "film_4",
+	},
+	{
+		title: "The Whale",
+		imgUrl: "https://static.hdrezka.ac/i/2023/2/24/h23d8c65d734akd89q94c.jpg",
+		id: "film_5",
+	},
 ];
 const filmList = document.querySelector(".js-film-list");
 function createMarkup(array) {
-  return array
-    .map(
-      (film) => `<li id="${film.id}">
+	return array
+		.map(
+			(film) => `<li id="${film.id}">
      <img src="${film.imgUrl}" alt="${film.title}" />
      <p>${film.title}</p>
 </li>
-    `
-    )
-    .join();
+    `,
+		)
+		.join();
 }
 
 filmList.innerHTML = createMarkup(films);
 // Приклад елементу списку
 {
-  /* <li id="${id}">
+	/* <li id="${id}">
      <img src="${imgUrl}" alt="${title}" />
      <p>${title}</p>
 </li> */
@@ -160,3 +160,20 @@ filmList.innerHTML = createMarkup(films);
 
 // event.target.reset();
 // }
+
+const modalBtn = document.querySelector(".js-btn-modal");
+
+const onClick = () => {
+	const modal = basicLightbox.create(`
+    <div class="modal">
+        <p>
+            Your first lightbox with just a few lines of code.
+            Yes, it's really that simple.
+        </p>
+    </div>
+`);
+
+	modal.show();
+};
+
+modalBtn.addEventListener("click", onClick);
