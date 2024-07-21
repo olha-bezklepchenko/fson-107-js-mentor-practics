@@ -40,6 +40,18 @@ function renderSwitch() {
 //!module 10
 //TODO:====================01==========================
 // Потрібно створити калькулятор віку. Є контейнер з заголовком "калькулятором віку" і input з введенням дати. Якщо ми натиснемо на input дати, ми зможемо вибрати дату нашого дня народження. Наприклад, якщо ми виберемо дату 17.06.1998 року і натиснемо на "Розрахувати вік", побачимо, що вік розраховується на основі цієї дати і нам у результаті покажеться, що Your age is 25 years old; Якщо нічого не введено, то виводь alert("Please enter your birthday")Використовуй доповіжні функції для роботи.
+refs.btn.addEventListener("click", onBtnClick) 
+function onBtnClick() {
+const userData = new Date(refs.input.value);
+const currentDate = new Date();
+const diff = currentDate - userData;
+const result = getAge(diff)
+refs.outPut.textContent = `Your age is ${result} years old`;
+}
+
+function getAge(ms) {
+  return Math.floor(ms / (1000 * 60 * 60 * 24 * 365.25));
+}
 
 //* promise
 //TODO:====================01==========================
