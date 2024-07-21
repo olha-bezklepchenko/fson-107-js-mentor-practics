@@ -4,4 +4,5 @@ export const refs = {
   input: document.querySelector(".js-input"),
   btn: document.querySelector(".js-form-btn"),
   outPut: document.querySelector(".js-form-result"),
+  calendarContainer: document.querySelector(".js-container"),
 };

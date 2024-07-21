@@ -34,8 +34,7 @@ function renderSwitch() {
   }
 }
 
-//TODO:====================02==========================
-// Напиши скрипт для віджета календаря. В кінцевому результаті повинна відображатися сьогоднішня дата у календарику. Використовуй new Date() для отримання поточного року, місяця, дня тижня та самого дня. Задай відповідні дані у відповідні елементи на html сторінці.
+
 
 //!module 10
 //TODO:====================01==========================
@@ -52,6 +51,23 @@ refs.outPut.textContent = `Your age is ${result} years old`;
 function getAge(ms) {
   return Math.floor(ms / (1000 * 60 * 60 * 24 * 365.25));
 }
+//TODO:====================02==========================
+// Напиши скрипт для віджета календаря. В кінцевому результаті повинна відображатися сьогоднішня дата у календарику. Використовуй new Date() для отримання поточного року, місяця, дня тижня та самого дня. Задай відповідні дані у відповідні елементи на html сторінці.
+
+const currentDate = new Date();
+const month = currentDate.toLocaleDateString("uk-UA", { month: "long" });
+const weekday = currentDate.toLocaleDateString("uk-UA", { weekday: "long" });
+const day = currentDate.toLocaleDateString("uk-UA", { day: "numeric" });
+const year = currentDate.toLocaleDateString("uk-UA", { year: "numeric" });
+
+refs.calendarContainer.querySelector(".js-month").textContent = month;
+refs.calendarContainer.querySelector(".js-day-number").textContent = day;
+refs.calendarContainer.querySelector(".js-day").textContent = weekday;
+refs.calendarContainer.querySelector(".js-year").textContent = year;
+
+
+
+
 
 //* promise
 //TODO:====================01==========================
